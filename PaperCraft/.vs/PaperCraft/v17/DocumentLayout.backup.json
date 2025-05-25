@@ -1,0 +1,403 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shind\\source\\repos\\PaperCraft\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\models\\useractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\models\\useractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\viewmodels\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\viewmodels\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\services\\useractivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\services\\useractivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\services\\contracts\\iuseractivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\services\\contracts\\iuseractivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\viewmodels\\profiledataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\viewmodels\\profiledataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\wwwroot\\css\\animations.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\wwwroot\\css\\animations.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|c:\\users\\shind\\source\\repos\\papercraft\\papercraft\\wwwroot\\css\\profile.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28DDAD32-6AF2-4580-9CD3-B460DB047E51}|PaperCraft\\PaperCraft.csproj|solutionrelative:papercraft\\wwwroot\\css\\profile.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\Product.cs",
+              "RelativeToolTip": "PaperCraft\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:28:53.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\Category.cs",
+              "RelativeToolTip": "PaperCraft\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:28:22.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "PaperCraft\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:25:59.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\ViewModels\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\ViewModels\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\ViewModels\\AccountViewModels.cs",
+              "RelativeToolTip": "PaperCraft\\ViewModels\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T10:16:47.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Program.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Program.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Program.cs",
+              "RelativeToolTip": "PaperCraft\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:20:31.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "PaperCraft\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:17:55.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserActivityService.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Services\\UserActivityService.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Services\\UserActivityService.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Services\\UserActivityService.cs",
+              "RelativeToolTip": "PaperCraft\\Services\\UserActivityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:17:26.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUserActivityService.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Services\\Contracts\\IUserActivityService.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Services\\Contracts\\IUserActivityService.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Services\\Contracts\\IUserActivityService.cs",
+              "RelativeToolTip": "PaperCraft\\Services\\Contracts\\IUserActivityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:17:10.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\ViewModels\\UserProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeToolTip": "PaperCraft\\ViewModels\\UserProfileViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwHIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:12:31.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\AppUser.cs",
+              "RelativeToolTip": "PaperCraft\\Models\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:12:07.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProfileDataViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\ViewModels\\ProfileDataViewModel.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\ViewModels\\ProfileDataViewModel.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\ViewModels\\ProfileDataViewModel.cs",
+              "RelativeToolTip": "PaperCraft\\ViewModels\\ProfileDataViewModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:11:25.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserActivity.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\UserActivity.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Models\\UserActivity.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\UserActivity.cs",
+              "RelativeToolTip": "PaperCraft\\Models\\UserActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:10:56.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Models\\Order.cs",
+              "RelativeToolTip": "PaperCraft\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:10:10.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "profile.css",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\profile.css",
+              "RelativeDocumentMoniker": "PaperCraft\\wwwroot\\css\\profile.css",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\profile.css",
+              "RelativeToolTip": "PaperCraft\\wwwroot\\css\\profile.css",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-25T10:49:07.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "animations.css",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\animations.css",
+              "RelativeDocumentMoniker": "PaperCraft\\wwwroot\\css\\animations.css",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\animations.css",
+              "RelativeToolTip": "PaperCraft\\wwwroot\\css\\animations.css",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAqwLQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-25T10:49:03.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "profile.css",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\profile.css",
+              "RelativeDocumentMoniker": "PaperCraft\\wwwroot\\css\\profile.css",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\profile.css",
+              "RelativeToolTip": "PaperCraft\\wwwroot\\css\\profile.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwNUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-25T10:37:28.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\main.css",
+              "RelativeDocumentMoniker": "PaperCraft\\wwwroot\\css\\main.css",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\css\\main.css",
+              "RelativeToolTip": "PaperCraft\\wwwroot\\css\\main.css",
+              "ViewState": "AgIAAKwBAAAAAAAAAAAqwNgBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-25T10:18:23.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PaperCraft\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PaperCraft\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-25T10:07:34.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "PaperCraft\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "PaperCraft\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAABgCAAAAAAAAAAAcwFACAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-25T10:03:19.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "PaperCraft\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "PaperCraft\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAAkwEwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T10:02:55.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PaperCraft\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PaperCraft\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAK8CAAAAAAAAAAAcwOcCAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-25T10:02:34.189Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1286981731:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

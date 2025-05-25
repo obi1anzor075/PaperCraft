@@ -1,0 +1,744 @@
+﻿		<!-- Home Page -->
+<div id="home-page" class="page-content">
+	<section id="home" class="hero">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6" data-aos="fade-right">
+					<div class="hero-content">
+						<h1>Добро пожаловать в PaperCraft</h1>
+						<p>
+							Ваш лучший выбор качественных канцелярских товаров для
+							творчества, учебы и работы
+						</p>
+						<button class="btn btn-hero" onclick="showPage('products')">
+							<i class="fas fa-shopping-bag me-2"></i>Посмотреть товары
+						</button>
+					</div>
+				</div>
+				<div class="col-lg-6" data-aos="fade-left">
+					<div class="text-center floating">
+						<i class="fas fa-palette"
+						   style="font-size: 15rem; opacity: 0.3"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="features">
+		<div class="container">
+			<h2 class="section-title" data-aos="fade-up">Почему выбирают нас?</h2>
+			<div class="row">
+				<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="text-center">
+						<div class="feature-icon"><i class="fas fa-truck"></i></div>
+						<h4>Быстрая доставка</h4>
+						<p>Доставляем по всей России в течение 1-3 дней</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="text-center">
+						<div class="feature-icon"><i class="fas fa-medal"></i></div>
+						<h4>Качество</h4>
+						<p>Только проверенные бренды и качественные товары</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+					<div class="text-center">
+						<div class="feature-icon"><i class="fas fa-headset"></i></div>
+						<h4>Поддержка 24/7</h4>
+						<p>Наша команда всегда готова помочь вам</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="featured-products" class="container py-5">
+		<h2 class="section-title" data-aos="fade-up">Популярные товары</h2>
+		<div class="row" id="featured-product-list"></div>
+		<div class="text-center mt-4">
+			<button class="btn btn-primary" onclick="showPage('products')">
+				Посмотреть все товары
+			</button>
+		</div>
+	</section>
+</div>
+
+<!-- Products Page -->
+<div id="products-page" class="page-content d-none">
+	<div class="page-header">
+		<div class="container">
+			<h1><i class="fas fa-boxes me-3"></i>Наши товары</h1>
+			<p>Широкий ассортимент канцелярских товаров высочайшего качества</p>
+		</div>
+	</div>
+	<section id="products" class="container py-5">
+		<div class="row mb-4">
+			<div class="col-md-4">
+				<div class="input-group">
+					<input type="text"
+						   class="form-control"
+						   placeholder="Поиск товаров..."
+						   id="search-input" />
+					<button class="btn btn-primary">
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<select class="form-select" id="category-select">
+					<option value="">Все категории</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				<select class="form-select" id="sort-select">
+					<option value="">Сортировка</option>
+					<option value="price-low">Цена: по возрастанию</option>
+					<option value="price-high">Цена: по убыванию</option>
+					<option value="name">По названию</option>
+					<option value="category">По категории</option>
+				</select>
+			</div>
+		</div>
+		<div class="row" id="product-list"></div>
+	</section>
+</div>
+
+<!-- Categories Page -->
+<div id="categories-page" class="page-content d-none">
+	<div class="page-header">
+		<div class="container">
+			<h1><i class="fas fa-th-large me-3"></i>Категории товаров</h1>
+			<p>Выберите категорию для быстрого поиска нужных товаров</p>
+		</div>
+	</div>
+	<section id="categories" class="container py-5">
+		<div class="row">
+			<div class="col-md-4 mb-4" data-aos="fade-up">
+				<div class="category-card">
+					<div class="category-icon"><i class="fas fa-pen"></i></div>
+					<h4>Ручки и карандаши</h4>
+					<p>Шариковые, гелевые ручки, карандаши, маркеры</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="category-card">
+					<div class="category-icon"><i class="fas fa-book"></i></div>
+					<h4>Тетради и блокноты</h4>
+					<p>Тетради, блокноты, ежедневники, планеры</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="category-card">
+					<div class="category-icon"><i class="fas fa-palette"></i></div>
+					<h4>Творчество</h4>
+					<p>Краски, кисти, цветная бумага, клей</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="category-card">
+					<div class="category-icon"><i class="fas fa-desktop"></i></div>
+					<h4>Офисные принадлежности</h4>
+					<p>Папки, скрепки, степлеры, органайзеры</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+				<div class="category-card">
+					<div class="category-icon">
+						<i class="fas fa-graduation-cap"></i>
+					</div>
+					<h4>Школьные товары</h4>
+					<p>Рюкзаки, пеналы, линейки, циркули</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+				<div class="category-card">
+					<div class="category-icon"><i class="fas fa-gift"></i></div>
+					<h4>Подарки</h4>
+					<p>Подарочные наборы, сувениры, упаковка</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- About Page -->
+<div id="about-page" class="page-content d-none">
+	<div class="page-header">
+		<div class="container">
+			<h1><i class="fas fa-users me-3"></i>О нас</h1>
+			<p>Узнайте больше о нашей компании и миссии</p>
+		</div>
+	</div>
+	<section id="about" class="container py-5">
+		<div class="row align-items-center mb-5">
+			<div class="col-lg-6" data-aos="fade-right">
+				<h2>Наша история</h2>
+				<p class="lead">
+					PaperCraft начал свою деятельность в 2010 году как небольшой
+					семейный магазин канцелярских товаров.
+				</p>
+				<p>
+					За годы работы мы выросли в одну из ведущих компаний в области
+					поставки качественных канцелярских принадлежностей. Наша миссия -
+					предоставить каждому клиенту доступ к лучшим товарам для
+					творчества, учебы и работы.
+				</p>
+				<p>
+					Мы сотрудничаем с ведущими производителями со всего мира и
+					гордимся тем, что можем предложить нашим клиентам только
+					качественную и проверенную продукцию.
+				</p>
+			</div>
+			<div class="col-lg-6" data-aos="fade-left">
+				<div class="text-center">
+					<i class="fas fa-store"
+					   style="
+									font-size: 12rem;
+									color: var(--primary-color);
+									opacity: 0.3;
+								"></i>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center mb-4" data-aos="fade-up">
+				<div class="display-4 text-primary fw-bold">13</div>
+				<p>лет на рынке</p>
+			</div>
+			<div class="col-md-3 text-center mb-4"
+				 data-aos="fade-up"
+				 data-aos-delay="100">
+				<div class="display-4 text-primary fw-bold">50K+</div>
+				<p>довольных клиентов</p>
+			</div>
+			<div class="col-md-3 text-center mb-4"
+				 data-aos="fade-up"
+				 data-aos-delay="200">
+				<div class="display-4 text-primary fw-bold">5K+</div>
+				<p>товаров в ассортименте</p>
+			</div>
+			<div class="col-md-3 text-center mb-4"
+				 data-aos="fade-up"
+				 data-aos-delay="300">
+				<div class="display-4 text-primary fw-bold">100+</div>
+				<p>брендов-партнеров</p>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- Contact Page -->
+<div id="contact-page" class="page-content d-none">
+	<div class="page-header">
+		<div class="container">
+			<h1><i class="fas fa-envelope me-3"></i>Контакты</h1>
+			<p>Свяжитесь с нами любым удобным способом</p>
+		</div>
+	</div>
+	<section id="contact" class="container py-5">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="form-container" data-aos="fade-right">
+					<h3 class="mb-4">Отправить сообщение</h3>
+					<form id="contact-form">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="contact-name" class="form-label">Имя *</label>
+								<input type="text"
+									   class="form-control"
+									   id="contact-name"
+									   required />
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="contact-email" class="form-label">Email *</label>
+								<input type="email"
+									   class="form-control"
+									   id="contact-email"
+									   required />
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="contact-subject" class="form-label">Тема</label>
+							<input type="text"
+								   class="form-control"
+								   id="contact-subject" />
+						</div>
+						<div class="mb-3">
+							<label for="contact-message" class="form-label">Сообщение *</label>
+							<textarea class="form-control"
+									  id="contact-message"
+									  rows="5"
+									  required></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							<i class="fas fa-paper-plane me-2"></i>Отправить
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="form-container" data-aos="fade-left">
+					<h3 class="mb-4">Информация</h3>
+					<div class="mb-4">
+						<h5>
+							<i class="fas fa-map-marker-alt text-primary me-2"></i>Адрес
+						</h5>
+						<p>123456, г. Москва<br />ул. Канцелярская, д. 25</p>
+					</div>
+					<div class="mb-4">
+						<h5><i class="fas fa-phone text-primary me-2"></i>Телефон</h5>
+						<p>+7 (495) 123-45-67</p>
+					</div>
+					<div class="mb-4">
+						<h5><i class="fas fa-envelope text-primary me-2"></i>Email</h5>
+						<p>info@papercraft.ru</p>
+					</div>
+					<div class="mb-4">
+						<h5>
+							<i class="fas fa-clock text-primary me-2"></i>Режим работы
+						</h5>
+						<p>Пн-Пт: 9:00 - 20:00<br />Сб-Вс: 10:00 - 18:00</p>
+					</div>
+					<div class="social-links">
+						<h5>Мы в соцсетях</h5>
+						<a href="#" class="btn btn-outline-primary btn-sm me-2">
+							<i class="fab fa-vk"></i>
+						</a>
+						<a href="#" class="btn btn-outline-primary btn-sm me-2">
+							<i class="fab fa-telegram"></i>
+						</a>
+						<a href="#" class="btn btn-outline-primary btn-sm">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- Contact Page -->
+<div id="contact-page" class="page-content d-none">
+	<div class="page-header">
+		<div class="container">
+			<h1><i class="fas fa-envelope me-3"></i>Контакты</h1>
+			<p>Свяжитесь с нами любым удобным способом</p>
+		</div>
+	</div>
+	<section id="contact" class="container py-5">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="form-container" data-aos="fade-right">
+					<h3 class="mb-4">Отправить сообщение</h3>
+					<form id="contact-form">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="contact-name" class="form-label">Имя *</label>
+								<input type="text"
+									   class="form-control"
+									   id="contact-name"
+									   required />
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="contact-email" class="form-label">Email *</label>
+								<input type="email"
+									   class="form-control"
+									   id="contact-email"
+									   required />
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="contact-subject" class="form-label">Тема</label>
+							<input type="text"
+								   class="form-control"
+								   id="contact-subject" />
+						</div>
+						<div class="mb-3">
+							<label for="contact-message" class="form-label">Сообщение *</label>
+							<textarea class="form-control"
+									  id="contact-message"
+									  rows="5"
+									  required></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							<i class="fas fa-paper-plane me-2"></i>Отправить
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="form-container" data-aos="fade-left">
+					<h3 class="mb-4">Информация</h3>
+					<div class="mb-4">
+						<h5>
+							<i class="fas fa-map-marker-alt text-primary me-2"></i>Адрес
+						</h5>
+						<p>123456, г. Москва<br />ул. Канцелярская, д. 25</p>
+					</div>
+					<div class="mb-4">
+						<h5><i class="fas fa-phone text-primary me-2"></i>Телефон</h5>
+						<p>+7 (495) 123-45-67</p>
+					</div>
+					<div class="mb-4">
+						<h5><i class="fas fa-envelope text-primary me-2"></i>Email</h5>
+						<p>info@papercraft.ru</p>
+					</div>
+					<div class="mb-4">
+						<h5>
+							<i class="fas fa-clock text-primary me-2"></i>Режим работы
+						</h5>
+						<p>Пн-Пт: 9:00 - 20:00<br />Сб-Вс: 10:00 - 18:00</p>
+					</div>
+					<div class="social-links">
+						<h5>Мы в соцсетях</h5>
+						<a href="#" class="btn btn-outline-primary btn-sm me-2">
+							<i class="fab fa-vk"></i>
+						</a>
+						<a href="#" class="btn btn-outline-primary btn-sm me-2">
+							<i class="fab fa-telegram"></i>
+						</a>
+						<a href="#" class="btn btn-outline-primary btn-sm">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- Profile Page -->
+<div id="profile-page" class="page-content d-none">
+	<div class="profile-container">
+		<section class="profile-hero py-5">
+			<div class="container">
+				<div class="text-center text-white py-5">
+					<div class="avatar-container mb-4" data-aos="zoom-in">
+						<div class="avatar rounded-circle d-flex align-items-center justify-content-center floating-animation">
+							<i class="fas fa-user-circle fs-1"></i>
+						</div>
+						<div class="avatar-badge rounded-circle pulse-animation"></div>
+					</div>
+
+					<h1 class="display-4 fw-bold mb-3" data-aos="fade-up" data-aos-delay="200">
+						<i class="fas fa-user-edit me-3"></i>Мой профиль
+					</h1>
+					<p class="lead mb-4" data-aos="fade-up" data-aos-delay="300">
+						Управляйте своей учетной записью и персональными данными
+					</p>
+
+					<!-- Stats -->
+					<div class="row justify-content-center g-4">
+						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+							<div class="stat-card rounded-4 p-4">
+								<div class="fs-2 fw-bold">15</div>
+								<div class="text-uppercase fw-semibold">Заказов</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="500">
+							<div class="stat-card rounded-4 p-4">
+								<div class="fs-2 fw-bold">2</div>
+								<div class="text-uppercase fw-semibold">Года с нами</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="600">
+							<div class="stat-card rounded-4 p-4">
+								<div class="fs-2 fw-bold">★ 4.9</div>
+								<div class="text-uppercase fw-semibold">Рейтинг</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="700">
+							<div class="stat-card rounded-4 p-4">
+								<div class="fs-2 fw-bold">12K</div>
+								<div class="text-uppercase fw-semibold">Бонусов</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main Content -->
+		<div class="container py-5">
+			<div class="row g-4">
+				<!-- Profile Form -->
+				<div class="col-lg-8">
+					<div class="glass-card rounded-4 p-4" data-aos="fade-right">
+						<div class="d-flex align-items-center mb-4">
+							<div class="icon-box rounded-3 me-3">
+								<i class="fas fa-id-card"></i>
+							</div>
+							<h3 class="mb-0 fw-bold text-primary">Личная информация</h3>
+						</div>
+
+						<form>
+							<div class="row g-4">
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+									<div class="form-floating">
+										<input type="text" class="form-control rounded-3" id="firstName" placeholder="Имя" value="Иван">
+										<label for="firstName"><i class="fas fa-user me-2"></i>Имя</label>
+									</div>
+								</div>
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+									<div class="form-floating">
+										<input type="text" class="form-control rounded-3" id="lastName" placeholder="Фамилия" value="Петров">
+										<label for="lastName"><i class="fas fa-user-tag me-2"></i>Фамилия</label>
+									</div>
+								</div>
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+									<div class="form-floating">
+										<input type="email" class="form-control rounded-3" id="email" placeholder="Email" value="ivan.petrov@example.com">
+										<label for="email"><i class="fas fa-envelope me-2"></i>Email</label>
+									</div>
+								</div>
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+									<div class="form-floating">
+										<input type="tel" class="form-control rounded-3" id="phone" placeholder="Телефон" value="+7 (999) 123-45-67">
+										<label for="phone"><i class="fas fa-phone me-2"></i>Телефон</label>
+									</div>
+								</div>
+								<div class="col-12" data-aos="fade-up" data-aos-delay="500">
+									<div class="form-floating">
+										<textarea class="form-control rounded-3" id="bio" placeholder="О себе" style="height: 120px">Увлекаюсь творчеством и люблю качественные канцелярские товары.</textarea>
+										<label for="bio"><i class="fas fa-info-circle me-2"></i>О себе</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-end gap-3 mt-4" data-aos="fade-up" data-aos-delay="600">
+								<button type="button" class="btn btn-outline-secondary btn-lg rounded-3">
+									<i class="fas fa-undo me-2"></i>Отменить
+								</button>
+								<button type="button" class="btn btn-gradient btn-lg rounded-3 px-4" onclick="saveProfile()">
+									<i class="fas fa-save me-2"></i>Сохранить изменения
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="col-lg-4">
+					<!-- Security Card -->
+					<div class="sidebar-card rounded-4 p-4 mb-4" data-aos="fade-left" data-aos-delay="100">
+						<div class="d-flex align-items-center mb-3">
+							<div class="icon-box rounded-3 me-3">
+								<i class="fas fa-shield-alt"></i>
+							</div>
+							<h5 class="mb-0 fw-bold text-primary">Безопасность</h5>
+						</div>
+						<div class="d-grid gap-2">
+							<button class="btn btn-outline-primary rounded-3" data-aos="fade-up" data-aos-delay="200">
+								<i class="fas fa-key me-2"></i>Изменить пароль
+							</button>
+							<button class="btn btn-outline-success rounded-3" data-aos="fade-up" data-aos-delay="300">
+								<i class="fas fa-mobile-alt me-2"></i>2FA
+							</button>
+							<button class="btn btn-outline-warning rounded-3" data-aos="fade-up" data-aos-delay="400">
+								<i class="fas fa-download me-2"></i>Экспорт данных
+							</button>
+						</div>
+					</div>
+
+					<!-- Activity Timeline -->
+					<div class="sidebar-card rounded-4 p-4 mb-4" data-aos="fade-left" data-aos-delay="200">
+						<div class="d-flex align-items-center mb-3">
+							<div class="icon-box rounded-3 me-3">
+								<i class="fas fa-history"></i>
+							</div>
+							<h5 class="mb-0 fw-bold text-primary">Активность</h5>
+						</div>
+						<div class="timeline position-relative ps-4">
+							<div class="timeline-item position-relative pb-3" data-aos="fade-up" data-aos-delay="300">
+								<small class="text-muted">2 часа назад</small>
+								<p class="mb-0 fw-semibold">Вход в систему</p>
+								<small class="text-muted">IP: 192.168.1.1</small>
+							</div>
+							<div class="timeline-item position-relative pb-3" data-aos="fade-up" data-aos-delay="400">
+								<small class="text-muted">1 день назад</small>
+								<p class="mb-0 fw-semibold">Обновление профиля</p>
+								<small class="text-muted">Изменены контакты</small>
+							</div>
+							<div class="timeline-item position-relative pb-3" data-aos="fade-up" data-aos-delay="500">
+								<small class="text-muted">3 дня назад</small>
+								<p class="mb-0 fw-semibold">Заказ #12345</p>
+								<small class="text-success">Доставлен</small>
+							</div>
+							<div class="timeline-item position-relative" data-aos="fade-up" data-aos-delay="600">
+								<small class="text-muted">1 неделю назад</small>
+								<p class="mb-0 fw-semibold">Регистрация</p>
+								<small class="text-primary">Добро пожаловать!</small>
+							</div>
+						</div>
+					</div>
+
+					<!-- Quick Actions -->
+					<div class="sidebar-card rounded-4 p-4" data-aos="fade-left" data-aos-delay="300">
+						<div class="d-flex align-items-center mb-3">
+							<div class="icon-box rounded-3 me-3">
+								<i class="fas fa-bolt"></i>
+							</div>
+							<h5 class="mb-0 fw-bold text-primary">Быстрые действия</h5>
+						</div>
+						<div class="d-grid gap-2">
+							<button class="btn btn-outline-success rounded-3 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+								<i class="fas fa-shopping-bag me-2"></i>
+								<div class="text-start flex-grow-1">
+									<div class="fw-semibold">Мои заказы</div>
+									<small class="text-muted">15 заказов</small>
+								</div>
+							</button>
+							<button class="btn btn-outline-danger rounded-3 d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+								<i class="fas fa-heart me-2"></i>
+								<div class="text-start flex-grow-1">
+									<div class="fw-semibold">Избранное</div>
+									<small class="text-muted">8 товаров</small>
+								</div>
+							</button>
+							<button class="btn btn-outline-info rounded-3 d-flex align-items-center" data-aos="fade-up" data-aos-delay="600">
+								<i class="fas fa-headset me-2"></i>
+								<div class="text-start flex-grow-1">
+									<div class="fw-semibold">Поддержка</div>
+									<small class="text-muted">24/7 онлайн</small>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+</div>
+
+<script>
+	// Initialize AOS
+	AOS.init({
+		duration: 800,
+		easing: 'ease-out-cubic',
+		once: true,
+		offset: 100
+	});
+
+	// Show toast notification
+	function showToast(message, type = 'success') {
+		const toastContainer = document.querySelector('.toast-container');
+		const toast = document.createElement('div');
+		toast.className = `custom-toast p-3 mb-2`;
+
+		const icon = type === 'success' ? 'fas fa-check-circle text-success' : 'fas fa-exclamation-circle text-danger';
+
+		toast.innerHTML = `
+			<div class="d-flex align-items-center">
+				<i class="${icon} me-2 fs-5"></i>
+				<span class="fw-semibold">${message}</span>
+				<button type="button" class="btn-close ms-auto" onclick="this.parentElement.parentElement.remove()"></button>
+			</div>
+		`;
+
+		toastContainer.appendChild(toast);
+
+		// Auto remove after 5 seconds
+		setTimeout(() => {
+			if (toast.parentElement) {
+				toast.style.animation = 'slideInRight 0.3s ease-out reverse';
+				setTimeout(() => toast.remove(), 300);
+			}
+		}, 5000);
+	}
+
+	// Save profile function with animation
+	function saveProfile() {
+		const btn = event.target;
+		const originalContent = btn.innerHTML;
+
+		// Show loading state
+		btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Сохранение...';
+		btn.disabled = true;
+
+		// Simulate API call
+		setTimeout(() => {
+			// Restore button
+			btn.innerHTML = originalContent;
+			btn.disabled = false;
+
+			// Show success animation
+			const card = document.querySelector('.glass-card');
+			card.style.transform = 'scale(1.02)';
+			card.style.transition = 'transform 0.3s ease';
+
+			setTimeout(() => {
+				card.style.transform = 'scale(1)';
+			}, 300);
+
+			// Show toast
+			showToast('Профиль успешно сохранён!', 'success');
+		}, 2000);
+	}
+
+	// Add input focus animations
+	document.querySelectorAll('.form-control').forEach(input => {
+		input.addEventListener('focus', function() {
+			this.parentElement.style.transform = 'translateY(-2px)';
+			this.parentElement.style.transition = 'transform 0.2s ease';
+		});
+
+		input.addEventListener('blur', function() {
+			this.parentElement.style.transform = 'translateY(0)';
+		});
+	});
+
+	// Add button hover effects
+	document.querySelectorAll('.btn').forEach(btn => {
+		btn.addEventListener('mouseenter', function() {
+			if (!this.classList.contains('btn-gradient')) {
+				this.style.transform = 'translateY(-2px)';
+				this.style.transition = 'transform 0.2s ease';
+			}
+		});
+
+		btn.addEventListener('mouseleave', function() {
+			if (!this.classList.contains('btn-gradient')) {
+				this.style.transform = 'translateY(0)';
+			}
+		});
+	});
+
+	// Add parallax effect to hero section
+	window.addEventListener('scroll', () => {
+		const hero = document.querySelector('.profile-hero');
+		const scrolled = window.pageYOffset;
+		const rate = scrolled * -0.5;
+
+		if (hero) {
+			hero.style.transform = `translateY(${rate}px)`;
+		}
+	});
+
+	// Add typing effect to title
+	function typeWriter(element, text, speed = 100) {
+		let i = 0;
+		element.innerHTML = '';
+
+		function type() {
+			if (i < text.length) {
+				element.innerHTML += text.charAt(i);
+				i++;
+				setTimeout(type, speed);
+			}
+		}
+		type();
+	}
+
+	// Initialize typing effect after page load
+	window.addEventListener('load', () => {
+		setTimeout(() => {
+			const title = document.querySelector('.display-4');
+			if (title) {
+				const originalText = title.textContent;
+				typeWriter(title, originalText, 50);
+			}
+		}, 1000);
+	});
+
+	console.log('Profile page initialized with animations');
+</script>
