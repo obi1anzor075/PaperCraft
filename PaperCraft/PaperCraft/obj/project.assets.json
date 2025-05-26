@@ -5135,11 +5135,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\PaperCraft.csproj",
+      "projectUniqueName": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\PaperCraft.csproj",
       "projectName": "PaperCraft",
-      "projectPath": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\PaperCraft.csproj",
+      "projectPath": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\PaperCraft.csproj",
       "packagesPath": "C:\\Users\\shind\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\obj\\",
+      "outputPath": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

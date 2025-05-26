@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PaperCraft.Data;
 using PaperCraft.Models;
+using PaperCraft.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,10 +30,14 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
     options.Password.RequiredLength = 1;
     options.Password.RequireLowercase = true;
     options.Password.RequireUppercase = true;
+    options.User.RequireUniqueEmail = true;
 })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddErrorDescriber<RussianIdentityErrorDescriber>()
     .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IUserActivityService, UserActivityService>();
+
 
 var app = builder.Build();
 

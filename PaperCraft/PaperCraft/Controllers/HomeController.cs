@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using PaperCraft.Models;
+using PaperCraft.ViewModels;
 
 namespace PaperCraft.Controllers;
 
@@ -17,6 +18,8 @@ public class HomeController : Controller
     {
         return View();
     }
+
+
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

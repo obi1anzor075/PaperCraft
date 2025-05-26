@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ToB9bncUbew=",
+  "dgSpecHash": "WIRESboJj3Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\shind\\source\\repos\\PaperCraft\\PaperCraft\\PaperCraft.csproj",
+  "projectFilePath": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\PaperCraft.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shind\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\shind\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

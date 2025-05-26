@@ -96,6 +96,23 @@ body {
         color: white;
     }
 
+.btn-favorite {
+    background: rgba(0,0,0,0.4);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+    .btn-favorite:hover {
+        background: rgba(0,0,0,0.6);
+    }
+
+
 /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -187,18 +204,6 @@ body {
     border: none;
     position: relative;
 }
-
-    .product-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, transparent, rgba(108, 92, 231, 0.05), transparent);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
 
     .product-card:hover::before {
         opacity: 1;
@@ -471,7 +476,7 @@ body {
 
     .stats-number {
     }
-
+}
 
 
 /* Page Styles */

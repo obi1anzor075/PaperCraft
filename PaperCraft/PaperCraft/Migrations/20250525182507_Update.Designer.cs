@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PaperCraft.Data;
 
@@ -11,9 +12,11 @@ using PaperCraft.Data;
 namespace PaperCraft.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250525182507_Update")]
+    partial class Update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -530,7 +533,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 1,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Гладкое письмо, чёрные чернила",
-                            ImageUrl = "https://s3.ibta.ru/goods/141180/42e90c64e373e4289de2aee5972c951a_l.jpg",
+                            ImageUrl = "/images/pen1.jpg",
                             IsActive = true,
                             Name = "Гелевая ручка",
                             Price = 49.99m
@@ -541,7 +544,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 2,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Клетка, обложка с рисунком",
-                            ImageUrl = "https://s3.ibta.ru/goods/402797/6231df38054d848d9842cb5c48cee431_l.jpg",
+                            ImageUrl = "/images/notebook1.jpg",
                             IsActive = true,
                             Name = "Тетрадь 96 л.",
                             Price = 89.00m
@@ -552,7 +555,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 3,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Набор из 6 неоновых цветов",
-                            ImageUrl = "https://s3.ibta.ru/goods/150491/3d1b800b86fca20ec4720ec41354bb62_l.jpg",
+                            ImageUrl = "/images/markers.jpg",
                             IsActive = true,
                             Name = "Маркеры для выделения",
                             Price = 149.50m
@@ -563,7 +566,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 4,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "С ластиком, 0.5 мм",
-                            ImageUrl = "https://s3.ibta.ru/goods/180286/6b21f01f60312703ea352df2bd608752_l.jpg",
+                            ImageUrl = "/images/mech-pencil.jpg",
                             IsActive = true,
                             Name = "Карандаш механический",
                             Price = 69.00m
@@ -574,7 +577,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 5,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "На спирали, 120 стр.",
-                            ImageUrl = "https://s3.ibta.ru/goods/111274/74e39a55982c7b2c92a94b0c5a711795_l.jpg",
+                            ImageUrl = "/images/notepad.jpg",
                             IsActive = true,
                             Name = "Блокнот A5",
                             Price = 129.00m
@@ -585,7 +588,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 6,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Металлические, 100 шт.",
-                            ImageUrl = "https://s3.ibta.ru/goods/220012/6d2547ea2cde13a2d7dacff0ce8504e8_l.jpg",
+                            ImageUrl = "/images/paperclips.jpg",
                             IsActive = true,
                             Name = "Скрепки",
                             Price = 35.00m
@@ -596,7 +599,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 7,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Формат A4, синяя",
-                            ImageUrl = "https://s3.ibta.ru/goods/225753/f50219f336419e2578c5ab08050257b4_l.jpg",
+                            ImageUrl = "/images/folder.jpg",
                             IsActive = true,
                             Name = "Папка-регистратор",
                             Price = 199.00m
@@ -607,7 +610,7 @@ namespace PaperCraft.Migrations
                             CategoryId = 6,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "12-разрядный дисплей",
-                            ImageUrl = "https://s3.ibta.ru/goods/250462/697149d326a54f6e6ba1882d76ee3994_l.jpg",
+                            ImageUrl = "/images/calculator.jpg",
                             IsActive = true,
                             Name = "Калькулятор",
                             Price = 499.00m
@@ -618,10 +621,131 @@ namespace PaperCraft.Migrations
                             CategoryId = 8,
                             CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Набор 24 цвета",
-                            ImageUrl = "https://s3.ibta.ru/goods/181690/9df61fc824c0f8facb7d19251e6061e4_l.jpg",
+                            ImageUrl = "/images/color-pencils.jpg",
                             IsActive = true,
                             Name = "Цветные карандаши",
                             Price = 189.90m
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 9,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Не оставляет следов",
+                            ImageUrl = "/images/eraser.jpg",
+                            IsActive = true,
+                            Name = "Ластик",
+                            Price = 29.00m
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 10,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "15 г",
+                            ImageUrl = "/images/glue-stick.jpg",
+                            IsActive = true,
+                            Name = "Клей-карандаш",
+                            Price = 49.00m
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Удобные ручки, 21 см",
+                            ImageUrl = "/images/scissors.jpg",
+                            IsActive = true,
+                            Name = "Ножницы офисные",
+                            Price = 119.00m
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Набор разноцветных",
+                            ImageUrl = "/images/sticky-tabs.jpg",
+                            IsActive = true,
+                            Name = "Стикеры-закладки",
+                            Price = 39.99m
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 8,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "12 цветов, водные",
+                            ImageUrl = "/images/markers2.jpg",
+                            IsActive = true,
+                            Name = "Фломастеры",
+                            Price = 99.00m
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 1,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Простая и надёжная",
+                            ImageUrl = "/images/pen2.jpg",
+                            IsActive = true,
+                            Name = "Ручка с синей пастой",
+                            Price = 19.00m
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Пластиковая, прозрачная",
+                            ImageUrl = "/images/ruler.jpg",
+                            IsActive = true,
+                            Name = "Линейка 30 см",
+                            Price = 25.00m
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CategoryId = 11,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Комплект 10 шт., А5",
+                            ImageUrl = "/images/covers.jpg",
+                            IsActive = true,
+                            Name = "Обложки для тетрадей",
+                            Price = 59.00m
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CategoryId = 12,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "На молнии, текстиль",
+                            ImageUrl = "/images/pencil-case.jpg",
+                            IsActive = true,
+                            Name = "Пенал",
+                            Price = 249.00m
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Металлический, до 10 листов",
+                            ImageUrl = "/images/hole-punch.jpg",
+                            IsActive = true,
+                            Name = "Дырокол",
+                            Price = 179.00m
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Прозрачный, 18 мм",
+                            ImageUrl = "/images/tape.jpg",
+                            IsActive = true,
+                            Name = "Скотч канцелярский",
+                            Price = 33.00m
                         });
                 });
 

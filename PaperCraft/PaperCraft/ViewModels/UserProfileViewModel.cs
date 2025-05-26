@@ -148,14 +148,13 @@ namespace PaperCraft.ViewModels
         public DateTime? EstimatedDelivery { get; set; }
     }
 
-    public class OrderItemViewModel
-    {
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public decimal Price { get; set; }
-        public decimal Total => Quantity * Price;
-        public string ProductImageUrl { get; set; }
-    }
+        public class OrderItemViewModel
+        {
+            public int ProductId { get; set; }
+            public int Quantity { get; set; }
+            public decimal Price { get; set; }
+        }
+
 
     public class CategoryViewModel
     {

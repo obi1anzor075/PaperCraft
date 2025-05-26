@@ -1,4 +1,5 @@
-﻿		<!-- Home Page -->
+﻿
+<!-- Home Page -->
 <div id="home-page" class="page-content">
 	<section id="home" class="hero">
 		<div class="container">
@@ -52,45 +53,31 @@
 			</div>
 		</div>
 	</section>
-	<section id="featured-products" class="container py-5">
-		<h2 class="section-title" data-aos="fade-up">Популярные товары</h2>
-		<div class="row" id="featured-product-list"></div>
-		<div class="text-center mt-4">
-			<button class="btn btn-primary" onclick="showPage('products')">
-				Посмотреть все товары
-			</button>
-		</div>
-	</section>
 </div>
 
 <!-- Products Page -->
 <div id="products-page" class="page-content d-none">
-	<div class="page-header">
-		<div class="container">
-			<h1><i class="fas fa-boxes me-3"></i>Наши товары</h1>
-			<p>Широкий ассортимент канцелярских товаров высочайшего качества</p>
+	<div class="page-header position-relative text-center text-white py-5 overflow-hidden">
+		<div class="wave wave-top"></div>
+		<div class="container position-relative">
+			<h1 class="display-4 fw-bold" data-aos="fade-down">Наши товары</h1>
+			<p class="lead" data-aos="fade-up" data-aos-delay="200">
+				Широкий ассортимент канцелярских товаров высочайшего качества
+			</p>
 		</div>
+		<div class="wave wave-bottom"></div>
 	</div>
+
 	<section id="products" class="container py-5">
-		<div class="row mb-4">
-			<div class="col-md-4">
-				<div class="input-group">
-					<input type="text"
-						   class="form-control"
-						   placeholder="Поиск товаров..."
-						   id="search-input" />
-					<button class="btn btn-primary">
-						<i class="fas fa-search"></i>
-					</button>
+		<div class="row mb-5 g-3">
+			<div class="col-md-4" data-aos="fade-right">
+				<div class="input-group shadow-sm rounded">
+					<span class="input-group-text bg-white border-0"><i class="fas fa-search"></i></span>
+					<input type="text" class="form-control border-0" placeholder="Поиск товаров..." id="search-input">
 				</div>
 			</div>
-			<div class="col-md-4">
-				<select class="form-select" id="category-select">
-					<option value="">Все категории</option>
-				</select>
-			</div>
-			<div class="col-md-4">
-				<select class="form-select" id="sort-select">
+			<div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
+				<select class="form-select shadow-sm" id="sort-select">
 					<option value="">Сортировка</option>
 					<option value="price-low">Цена: по возрастанию</option>
 					<option value="price-high">Цена: по убыванию</option>
@@ -99,9 +86,13 @@
 				</select>
 			</div>
 		</div>
-		<div class="row" id="product-list"></div>
+
+		<div class="row g-4" id="product-list">
+			<!-- Карточки генерируются JS -->
+		</div>
 	</section>
 </div>
+
 
 <!-- Categories Page -->
 <div id="categories-page" class="page-content d-none">
@@ -408,337 +399,139 @@
 </div>
 
 <!-- Profile Page -->
-<div id="profile-page" class="page-content d-none">
-	<div class="profile-container">
-		<section class="profile-hero py-5">
-			<div class="container">
-				<div class="text-center text-white py-5">
-					<div class="avatar-container mb-4" data-aos="zoom-in">
-						<div class="avatar rounded-circle d-flex align-items-center justify-content-center floating-animation">
-							<i class="fas fa-user-circle fs-1"></i>
+<div id="profile-page" class="page-content" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+
+
+	<!-- Hero Section -->
+	<section class="profile-hero py-5 position-relative">
+		<div class="container text-center">
+			<!-- Animated background circles -->
+			<div class="bg-circle circle-1"></div>
+			<div class="bg-circle circle-2"></div>
+
+			<!-- Avatar -->
+			<div class="avatar-container mb-4" data-aos="zoom-in">
+				<div class="avatar rounded-circle d-flex align-items-center justify-content-center">
+					<i class="fas fa-user-circle"></i>
+				</div>
+				<div class="avatar-badge rounded-circle"></div>
+			</div>
+
+			<h1 class="display-4 fw-bold text-white" data-aos="fade-up" data-aos-delay="200">
+				<i class="fas fa-user-edit me-3"></i>Мой профиль
+			</h1>
+			<p class="lead text-white-75 mb-4" data-aos="fade-up" data-aos-delay="300">
+				Управляйте своей учетной записью и персональными данными
+			</p>
+
+			<!-- Stats -->
+			<div class="stats-grid pt-4" data-aos="fade-up" data-aos-delay="400">
+				<div class="stat-card">
+					<div class="number" id="stat-orders">0</div>
+					<div class="label">Заказов</div>
+				</div>
+				<div class="stat-card">
+					<div class="number" id="stat-years">0</div>
+					<div class="label">Года с нами</div>
+				</div>
+				<div class="stat-card">
+					<div class="number" id="stat-rating">★ 4.0</div>
+					<div class="label">Рейтинг</div>
+				</div>
+				<div class="stat-card">
+					<div class="number" id="stat-bonus">0</div>
+					<div class="label">Бонусов</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<div class="profile-content container py-5">
+		<div class="row g-4">
+			<!-- Profile Form -->
+			<div class="col-lg-8">
+				<div class="glass-card rounded-4 p-4 profile-form-container" data-aos="fade-right">
+					<h3 class="fw-bold mb-4 text-dark">Личная информация</h3>
+					<form id="profile-form" class="profile-form">
+						<div class="row g-3">
+							<div class="col-md-6">
+								<label for="profile-firstName" class="text-dark">Имя *</label>
+								<input type="text" id="profile-firstName" class="form-control" placeholder="Имя">
+							</div>
+							<div class="col-md-6">
+								<label for="profile-lastName" class="text-dark">Фамилия *</label>
+								<input type="text" id="profile-lastName" class="form-control" placeholder="Фамилия">
+							</div>
+							<div class="col-md-6">
+								<label for="profile-email" class="text-dark">Email *</label>
+								<input type="email" id="profile-email" class="form-control" placeholder="Email">
+							</div>
+							<div class="col-md-6">
+								<label for="profile-phone" class="text-dark">Телефон</label>
+								<input type="tel" id="profile-phone" class="form-control" placeholder="Телефон">
+							</div>
+							<div class="col-12">
+								<label for="profile-bio" class="text-dark">О себе</label>
+								<textarea id="profile-bio" class="form-control" rows="4" placeholder="О себе"></textarea>
+							</div>
 						</div>
-						<div class="avatar-badge rounded-circle pulse-animation"></div>
+						<div class="actions d-flex justify-content-end gap-3 mt-4">
+							<button type="button" class="btn btn-outline-dark">Отменить</button>
+							<button type="button" class="btn btn-primary" id="profile-save-btn">Сохранить изменения</button>
+						</div>
+					</form>
+				</div>
+
+				<!-- Orders Section -->
+				<div class="glass-card rounded-4 p-4 mt-4" data-aos="fade-right" data-aos-delay="200">
+					<h3 class="fw-bold mb-4 text-dark">Мои заказы</h3>
+					<div id="orders-container" class="text-dark">
+						<!-- Заказы загружаются JS -->
 					</div>
-
-					<h1 class="display-4 fw-bold mb-3" data-aos="fade-up" data-aos-delay="200">
-						<i class="fas fa-user-edit me-3"></i>Мой профиль
-					</h1>
-					<p class="lead mb-4" data-aos="fade-up" data-aos-delay="300">
-						Управляйте своей учетной записью и персональными данными
-					</p>
-
-					<!-- Stats -->
-					<div class="row justify-content-center g-4">
-						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
-							<div class="stat-card rounded-4 p-4">
-								<div class="fs-2 fw-bold">15</div>
-								<div class="text-uppercase fw-semibold">Заказов</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="500">
-							<div class="stat-card rounded-4 p-4">
-								<div class="fs-2 fw-bold">2</div>
-								<div class="text-uppercase fw-semibold">Года с нами</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="600">
-							<div class="stat-card rounded-4 p-4">
-								<div class="fs-2 fw-bold">★ 4.9</div>
-								<div class="text-uppercase fw-semibold">Рейтинг</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="700">
-							<div class="stat-card rounded-4 p-4">
-								<div class="fs-2 fw-bold">12K</div>
-								<div class="text-uppercase fw-semibold">Бонусов</div>
-							</div>
-						</div>
+					<!-- Pagination Nav -->
+					<nav id="orders-pagination" class="mt-3 d-none">
+						<ul class="pagination pagination-custom justify-content-center"></ul>
+					</nav>
+					<div class="mt-3 text-end">
+						<button class="btn btn-outline-dark" onclick="refreshOrders()">
+							<i class="fas fa-sync-alt"></i> Обновить
+						</button>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<!-- Main Content -->
-		<div class="container py-5">
-			<div class="row g-4">
-				<!-- Profile Form -->
-				<div class="col-lg-8">
-					<div class="glass-card rounded-4 p-4" data-aos="fade-right">
-						<div class="d-flex align-items-center mb-4">
-							<div class="icon-box rounded-3 me-3">
-								<i class="fas fa-id-card"></i>
-							</div>
-							<h3 class="mb-0 fw-bold text-primary">Личная информация</h3>
-						</div>
-
-						<form>
-							<div class="row g-4">
-								<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-									<div class="form-floating">
-										<input type="text" class="form-control rounded-3" id="firstName" placeholder="Имя" value="Иван">
-										<label for="firstName"><i class="fas fa-user me-2"></i>Имя</label>
-									</div>
-								</div>
-								<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-									<div class="form-floating">
-										<input type="text" class="form-control rounded-3" id="lastName" placeholder="Фамилия" value="Петров">
-										<label for="lastName"><i class="fas fa-user-tag me-2"></i>Фамилия</label>
-									</div>
-								</div>
-								<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-									<div class="form-floating">
-										<input type="email" class="form-control rounded-3" id="email" placeholder="Email" value="ivan.petrov@example.com">
-										<label for="email"><i class="fas fa-envelope me-2"></i>Email</label>
-									</div>
-								</div>
-								<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-									<div class="form-floating">
-										<input type="tel" class="form-control rounded-3" id="phone" placeholder="Телефон" value="+7 (999) 123-45-67">
-										<label for="phone"><i class="fas fa-phone me-2"></i>Телефон</label>
-									</div>
-								</div>
-								<div class="col-12" data-aos="fade-up" data-aos-delay="500">
-									<div class="form-floating">
-										<textarea class="form-control rounded-3" id="bio" placeholder="О себе" style="height: 120px">Увлекаюсь творчеством и люблю качественные канцелярские товары.</textarea>
-										<label for="bio"><i class="fas fa-info-circle me-2"></i>О себе</label>
-									</div>
-								</div>
-							</div>
-
-							<div class="d-flex justify-content-end gap-3 mt-4" data-aos="fade-up" data-aos-delay="600">
-								<button type="button" class="btn btn-outline-secondary btn-lg rounded-3">
-									<i class="fas fa-undo me-2"></i>Отменить
-								</button>
-								<button type="button" class="btn btn-gradient btn-lg rounded-3 px-4" onclick="saveProfile()">
-									<i class="fas fa-save me-2"></i>Сохранить изменения
-								</button>
-							</div>
-						</form>
+			<!-- Sidebar -->
+			<div class="col-lg-4">
+				<!-- Security -->
+				<div class="sidebar-card mb-4 p-4" data-aos="fade-left">
+					<h5 class="fw-bold mb-3 text-dark">Безопасность</h5>
+					<div class="d-grid gap-2">
+						<button class="btn btn-outline-dark" onclick="showChangePassword()">Изменить пароль</button>
+						<button class="btn btn-outline-dark" onclick="exportUserData()">Экспорт данных</button>
 					</div>
 				</div>
 
-				<!-- Sidebar -->
-				<div class="col-lg-4">
-					<!-- Security Card -->
-					<div class="sidebar-card rounded-4 p-4 mb-4" data-aos="fade-left" data-aos-delay="100">
-						<div class="d-flex align-items-center mb-3">
-							<div class="icon-box rounded-3 me-3">
-								<i class="fas fa-shield-alt"></i>
-							</div>
-							<h5 class="mb-0 fw-bold text-primary">Безопасность</h5>
-						</div>
-						<div class="d-grid gap-2">
-							<button class="btn btn-outline-primary rounded-3" data-aos="fade-up" data-aos-delay="200">
-								<i class="fas fa-key me-2"></i>Изменить пароль
-							</button>
-							<button class="btn btn-outline-success rounded-3" data-aos="fade-up" data-aos-delay="300">
-								<i class="fas fa-mobile-alt me-2"></i>2FA
-							</button>
-							<button class="btn btn-outline-warning rounded-3" data-aos="fade-up" data-aos-delay="400">
-								<i class="fas fa-download me-2"></i>Экспорт данных
-							</button>
-						</div>
+				<!-- Activity Timeline -->
+				<div class="sidebar-card mb-4 p-4" data-aos="fade-left" data-aos-delay="200">
+					<h5 class="fw-bold mb-3 text-dark">Последняя активность</h5>
+					<div id="activity-timeline" class="text-dark">
+						<!-- Активность загружается JS -->
 					</div>
+				</div>
 
-					<!-- Activity Timeline -->
-					<div class="sidebar-card rounded-4 p-4 mb-4" data-aos="fade-left" data-aos-delay="200">
-						<div class="d-flex align-items-center mb-3">
-							<div class="icon-box rounded-3 me-3">
-								<i class="fas fa-history"></i>
-							</div>
-							<h5 class="mb-0 fw-bold text-primary">Активность</h5>
-						</div>
-						<div class="timeline position-relative ps-4">
-							<div class="timeline-item position-relative pb-3" data-aos="fade-up" data-aos-delay="300">
-								<small class="text-muted">2 часа назад</small>
-								<p class="mb-0 fw-semibold">Вход в систему</p>
-								<small class="text-muted">IP: 192.168.1.1</small>
-							</div>
-							<div class="timeline-item position-relative pb-3" data-aos="fade-up" data-aos-delay="400">
-								<small class="text-muted">1 день назад</small>
-								<p class="mb-0 fw-semibold">Обновление профиля</p>
-								<small class="text-muted">Изменены контакты</small>
-							</div>
-							<div class="timeline-item position-relative pb-3" data-aos="fade-up" data-aos-delay="500">
-								<small class="text-muted">3 дня назад</small>
-								<p class="mb-0 fw-semibold">Заказ #12345</p>
-								<small class="text-success">Доставлен</small>
-							</div>
-							<div class="timeline-item position-relative" data-aos="fade-up" data-aos-delay="600">
-								<small class="text-muted">1 неделю назад</small>
-								<p class="mb-0 fw-semibold">Регистрация</p>
-								<small class="text-primary">Добро пожаловать!</small>
-							</div>
-						</div>
-					</div>
-
-					<!-- Quick Actions -->
-					<div class="sidebar-card rounded-4 p-4" data-aos="fade-left" data-aos-delay="300">
-						<div class="d-flex align-items-center mb-3">
-							<div class="icon-box rounded-3 me-3">
-								<i class="fas fa-bolt"></i>
-							</div>
-							<h5 class="mb-0 fw-bold text-primary">Быстрые действия</h5>
-						</div>
-						<div class="d-grid gap-2">
-							<button class="btn btn-outline-success rounded-3 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
-								<i class="fas fa-shopping-bag me-2"></i>
-								<div class="text-start flex-grow-1">
-									<div class="fw-semibold">Мои заказы</div>
-									<small class="text-muted">15 заказов</small>
-								</div>
-							</button>
-							<button class="btn btn-outline-danger rounded-3 d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
-								<i class="fas fa-heart me-2"></i>
-								<div class="text-start flex-grow-1">
-									<div class="fw-semibold">Избранное</div>
-									<small class="text-muted">8 товаров</small>
-								</div>
-							</button>
-							<button class="btn btn-outline-info rounded-3 d-flex align-items-center" data-aos="fade-up" data-aos-delay="600">
-								<i class="fas fa-headset me-2"></i>
-								<div class="text-start flex-grow-1">
-									<div class="fw-semibold">Поддержка</div>
-									<small class="text-muted">24/7 онлайн</small>
-								</div>
-							</button>
-						</div>
+				<!-- Quick Actions -->
+				<div class="sidebar-card p-4" data-aos="fade-left" data-aos-delay="300">
+					<h5 class="fw-bold mb-3 text-dark">Быстрые действия</h5>
+					<div class="d-grid gap-2">
+						<button class="btn btn-outline-dark d-flex align-items-center btn-favorite-sidebar">
+							<i class="fas fa-heart me-2"></i> Избранное
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
+	</div>
 </div>
 
-<script>
-	// Initialize AOS
-	AOS.init({
-		duration: 800,
-		easing: 'ease-out-cubic',
-		once: true,
-		offset: 100
-	});
 
-	// Show toast notification
-	function showToast(message, type = 'success') {
-		const toastContainer = document.querySelector('.toast-container');
-		const toast = document.createElement('div');
-		toast.className = `custom-toast p-3 mb-2`;
-
-		const icon = type === 'success' ? 'fas fa-check-circle text-success' : 'fas fa-exclamation-circle text-danger';
-
-		toast.innerHTML = `
-			<div class="d-flex align-items-center">
-				<i class="${icon} me-2 fs-5"></i>
-				<span class="fw-semibold">${message}</span>
-				<button type="button" class="btn-close ms-auto" onclick="this.parentElement.parentElement.remove()"></button>
-			</div>
-		`;
-
-		toastContainer.appendChild(toast);
-
-		// Auto remove after 5 seconds
-		setTimeout(() => {
-			if (toast.parentElement) {
-				toast.style.animation = 'slideInRight 0.3s ease-out reverse';
-				setTimeout(() => toast.remove(), 300);
-			}
-		}, 5000);
-	}
-
-	// Save profile function with animation
-	function saveProfile() {
-		const btn = event.target;
-		const originalContent = btn.innerHTML;
-
-		// Show loading state
-		btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Сохранение...';
-		btn.disabled = true;
-
-		// Simulate API call
-		setTimeout(() => {
-			// Restore button
-			btn.innerHTML = originalContent;
-			btn.disabled = false;
-
-			// Show success animation
-			const card = document.querySelector('.glass-card');
-			card.style.transform = 'scale(1.02)';
-			card.style.transition = 'transform 0.3s ease';
-
-			setTimeout(() => {
-				card.style.transform = 'scale(1)';
-			}, 300);
-
-			// Show toast
-			showToast('Профиль успешно сохранён!', 'success');
-		}, 2000);
-	}
-
-	// Add input focus animations
-	document.querySelectorAll('.form-control').forEach(input => {
-		input.addEventListener('focus', function() {
-			this.parentElement.style.transform = 'translateY(-2px)';
-			this.parentElement.style.transition = 'transform 0.2s ease';
-		});
-
-		input.addEventListener('blur', function() {
-			this.parentElement.style.transform = 'translateY(0)';
-		});
-	});
-
-	// Add button hover effects
-	document.querySelectorAll('.btn').forEach(btn => {
-		btn.addEventListener('mouseenter', function() {
-			if (!this.classList.contains('btn-gradient')) {
-				this.style.transform = 'translateY(-2px)';
-				this.style.transition = 'transform 0.2s ease';
-			}
-		});
-
-		btn.addEventListener('mouseleave', function() {
-			if (!this.classList.contains('btn-gradient')) {
-				this.style.transform = 'translateY(0)';
-			}
-		});
-	});
-
-	// Add parallax effect to hero section
-	window.addEventListener('scroll', () => {
-		const hero = document.querySelector('.profile-hero');
-		const scrolled = window.pageYOffset;
-		const rate = scrolled * -0.5;
-
-		if (hero) {
-			hero.style.transform = `translateY(${rate}px)`;
-		}
-	});
-
-	// Add typing effect to title
-	function typeWriter(element, text, speed = 100) {
-		let i = 0;
-		element.innerHTML = '';
-
-		function type() {
-			if (i < text.length) {
-				element.innerHTML += text.charAt(i);
-				i++;
-				setTimeout(type, speed);
-			}
-		}
-		type();
-	}
-
-	// Initialize typing effect after page load
-	window.addEventListener('load', () => {
-		setTimeout(() => {
-			const title = document.querySelector('.display-4');
-			if (title) {
-				const originalText = title.textContent;
-				typeWriter(title, originalText, 50);
-			}
-		}, 1000);
-	});
-
-	console.log('Profile page initialized with animations');
-</script>

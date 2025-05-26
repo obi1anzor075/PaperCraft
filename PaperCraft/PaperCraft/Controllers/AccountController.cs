@@ -6,6 +6,7 @@ using PaperCraft.ViewModels;
 using PaperCraft.Services;
 using PaperCraft.Models.PaperCraft.Models;
 using PaperCraft.Data;
+using Microsoft.Data.SqlClient;
 
 public class AccountController : Controller
 {
@@ -30,10 +31,36 @@ public class AccountController : Controller
     public IActionResult Register() => PartialView("_RegisterPartial");
 
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterViewModel m)
     {
-        if (!ModelState.IsValid) return PartialView("_RegisterPartial", m);
+        if (!ModelState.IsValid)
+            return PartialView("_RegisterPartial", m);
 
+        // Обрезаем пробелы и нормализуем
+        m.Email = m.Email?.Trim();
+        var normalizedEmail = _userMgr.NormalizeEmail(m.Email);
+        var normalizedUserName = _userMgr.NormalizeName(m.Email);
+
+        // 1) Проверяем дубликат по нормализованному e-mail
+        var byEmail = await _userMgr.Users
+            .FirstOrDefaultAsync(u => u.NormalizedEmail == normalizedEmail);
+        if (byEmail != null)
+        {
+            ModelState.AddModelError(nameof(m.Email), "Пользователь с таким e-mail уже зарегистрирован.");
+            return PartialView("_RegisterPartial", m);
+        }
+
+        // 2) Проверяем дубликат по нормализованному UserName
+        var byName = await _userMgr.Users
+            .FirstOrDefaultAsync(u => u.NormalizedUserName == normalizedUserName);
+        if (byName != null)
+        {
+            ModelState.AddModelError(nameof(m.Email), "Имя пользователя уже занято.");
+            return PartialView("_RegisterPartial", m);
+        }
+
+        // 3) Создаём нового пользователя
         var user = new AppUser
         {
             FirstName = m.FirstName,
@@ -44,22 +71,44 @@ public class AccountController : Controller
             RegistrationDate = DateTime.UtcNow
         };
 
-        var result = await _userMgr.CreateAsync(user, m.Password);
+        IdentityResult result;
+        try
+        {
+            result = await _userMgr.CreateAsync(user, m.Password);
+        }
+        catch (DbUpdateException dbEx) when (
+            dbEx.InnerException is SqlException sqlEx &&
+            (sqlEx.Number == 2601 || sqlEx.Number == 2627))
+        {
+            // Дубликат ключа в БД
+            ModelState.AddModelError(nameof(m.Email), "Пользователь с таким e-mail уже существует.");
+            return PartialView("_RegisterPartial", m);
+        }
+
         if (result.Succeeded)
         {
+            // Авторизуем
             await _signInMgr.SignInAsync(user, isPersistent: false);
 
             // Логируем регистрацию
-            await _activityService.LogActivityAsync(user.Id, "Регистрация", "Добро пожаловать!",
-                GetClientIP(), Request.Headers["User-Agent"], ActivityType.Registration);
+            await _activityService.LogActivityAsync(
+                user.Id,
+                "Регистрация",
+                "Добро пожаловать!",
+                GetClientIP(),
+                Request.Headers["User-Agent"],
+                ActivityType.Registration);
 
             return Json(new { success = true });
         }
 
+        // В случае ошибок валидации Identity
         foreach (var err in result.Errors)
-            ModelState.AddModelError("", err.Description);
+            ModelState.AddModelError(string.Empty, err.Description);
+
         return PartialView("_RegisterPartial", m);
     }
+
 
     [HttpGet]
     public IActionResult Login() => PartialView("_LoginPartial");
@@ -107,6 +156,7 @@ public class AccountController : Controller
             {
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber ?? "",
                 Bio = user.Bio ?? ""
@@ -156,6 +206,9 @@ public class AccountController : Controller
                     ModelState.AddModelError("", e.Description);
                 return BadRequest(ModelState);
             }
+            if (user.UserName != user.Email)
+                user.UserName = user.Email;
+
             changes.Add("email");
         }
 
@@ -164,6 +217,8 @@ public class AccountController : Controller
             changes.Add("телефон");
             user.PhoneNumber = m.PhoneNumber;
         }
+
+
 
         var updateRes = await _userMgr.UpdateAsync(user);
         if (!updateRes.Succeeded)
@@ -184,41 +239,91 @@ public class AccountController : Controller
         return Ok(new { success = true });
     }
 
+    // GET: /Account/ChangePassword
+    [HttpGet]
+    public IActionResult ChangePassword()
+    {
+        return PartialView("_ChangePasswordPartial", new ChangePasswordViewModel());
+    }
+
+    // POST: /Account/ChangePassword
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ChangePassword(ChangePasswordViewModel m)
+    {
+        if (!ModelState.IsValid)
+            return PartialView("_ChangePasswordPartial", m);
+
+        var user = await _userMgr.GetUserAsync(User);
+        if (user == null) return Unauthorized();
+
+        var result = await _userMgr.ChangePasswordAsync(user, m.OldPassword, m.NewPassword);
+        if (result.Succeeded)
+        {
+            // Логируем смену пароля
+            await _activityService.LogActivityAsync(
+                user.Id,
+                "Смена пароля",
+                "Пароль успешно изменён",
+                GetClientIP(),
+                Request.Headers["User-Agent"],
+                ActivityType.Other);
+
+            return Json(new { success = true });
+        }
+
+        foreach (var err in result.Errors)
+            ModelState.AddModelError(string.Empty, err.Description);
+
+        return PartialView("_ChangePasswordPartial", m);
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetOrders(int page = 1, int pageSize = 10)
     {
         var user = await _userMgr.GetUserAsync(User);
         if (user == null) return Unauthorized();
 
-        var orders = await _context.Orders
+        // 1) Сначала тащим сами сущности из базы
+        var ordersEntities = await _context.Orders
             .Where(o => o.UserId == user.Id)
             .Include(o => o.OrderItems)
-            .ThenInclude(oi => oi.Product)
+                .ThenInclude(oi => oi.Product)
             .OrderByDescending(o => o.OrderDate)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
-            .Select(o => new
-            {
-                Id = o.Id,
-                OrderDate = o.OrderDate,
-                TotalAmount = o.TotalAmount,
-                Status = o.Status.ToString(),
-                StatusText = GetStatusText(o.Status),
-                ItemCount = o.OrderItems.Count,
-                Items = o.OrderItems.Select(oi => new
-                {
-                    ProductName = oi.Product.Name,
-                    Quantity = oi.Quantity,
-                    Price = oi.Price
-                }).ToList(),
-                TrackingNumber = o.TrackingNumber
-            })
             .ToListAsync();
 
+        // 2) Проецируем их в анонимные объекты уже в памяти
+        var orders = ordersEntities.Select(o => new
+        {
+            Id = o.Id,
+            OrderDate = o.OrderDate,
+            TotalAmount = o.TotalAmount,
+            Status = o.Status.ToString(),
+            // Вызываем GetStatusText уже здесь, вне EF Core
+            StatusText = GetStatusText(o.Status),
+            ItemCount = o.OrderItems.Count,
+            Items = o.OrderItems.Select(oi => new
+            {
+                ProductName = oi.Product.Name,
+                Quantity = oi.Quantity,
+                Price = oi.Price
+            }).ToList(),
+            TrackingNumber = o.TrackingNumber
+        }).ToList();
+
+        // 3) Считаем общее число заказов
         var totalCount = await _context.Orders.CountAsync(o => o.UserId == user.Id);
 
-        return Json(new { orders, totalCount, totalPages = (int)Math.Ceiling((double)totalCount / pageSize) });
+        return Json(new
+        {
+            orders,
+            totalCount,
+            totalPages = (int)Math.Ceiling((double)totalCount / pageSize)
+        });
     }
+
 
     [HttpPost]
     public async Task<IActionResult> Logout()
@@ -283,7 +388,8 @@ public class AccountController : Controller
 
     private async Task<List<OrderSummaryViewModel>> GetRecentOrdersAsync(string userId)
     {
-        return await _context.Orders
+        // Сначала получаем данные без вызова GetStatusText внутри EF-запроса
+        var orders = await _context.Orders
             .Where(o => o.UserId == userId)
             .OrderByDescending(o => o.OrderDate)
             .Take(5)
@@ -293,11 +399,20 @@ public class AccountController : Controller
                 OrderDate = o.OrderDate,
                 TotalAmount = o.TotalAmount,
                 Status = o.Status,
-                StatusText = GetStatusText(o.Status),
+                // Строку статуса отложим до после materialization
                 ItemCount = o.OrderItems.Count
             })
             .ToListAsync();
+
+        // Теперь уже в памяти преобразуем каждый объект, чтобы заполнить StatusText
+        foreach (var vm in orders)
+        {
+            vm.StatusText = GetStatusText(vm.Status);
+        }
+
+        return orders;
     }
+
 
     private string GetClientIP()
     {

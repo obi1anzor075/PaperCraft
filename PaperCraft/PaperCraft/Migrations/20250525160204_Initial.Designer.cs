@@ -12,7 +12,7 @@ using PaperCraft.Data;
 namespace PaperCraft.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250525100049_Initial")]
+    [Migration("20250525160204_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -166,6 +166,9 @@ namespace PaperCraft.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -208,6 +211,11 @@ namespace PaperCraft.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("RegistrationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -231,6 +239,249 @@ namespace PaperCraft.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("PaperCraft.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Шариковые, гелевые ручки, маркеры",
+                            Icon = "fas fa-pen",
+                            Name = "Ручки"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Тетради различных форматов",
+                            Icon = "fas fa-book",
+                            Name = "Тетради"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Маркеры для выделения и письма",
+                            Icon = "fas fa-highlighter",
+                            Name = "Маркер"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Простые и цветные карандаши",
+                            Icon = "fas fa-pencil-alt",
+                            Name = "Карандаши"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Блокноты и записные книжки",
+                            Icon = "fas fa-sticky-note",
+                            Name = "Блокноты"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Офисные принадлежности",
+                            Icon = "fas fa-briefcase",
+                            Name = "Офис"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Папки и регистраторы",
+                            Icon = "fas fa-folder",
+                            Name = "Папки"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Товары для творчества",
+                            Icon = "fas fa-palette",
+                            Name = "Творчество"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Различные канцелярские товары",
+                            Icon = "fas fa-paperclip",
+                            Name = "Канцтовары"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Клеящие материалы",
+                            Icon = "fas fa-prescription-bottle",
+                            Name = "Клей"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Обложки для тетрадей и книг",
+                            Icon = "fas fa-shield-alt",
+                            Name = "Обложки"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Школьные и офисные аксессуары",
+                            Icon = "fas fa-tools",
+                            Name = "Аксессуары"
+                        });
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("DeliveredDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("OrderDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<string>("ShippingAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TrackingNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.PaperCraft.Models.UserActivity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IPAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserAgent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserActivities");
+                });
+
             modelBuilder.Entity("PaperCraft.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -239,10 +490,13 @@ namespace PaperCraft.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -254,15 +508,21 @@ namespace PaperCraft.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
 
@@ -270,183 +530,255 @@ namespace PaperCraft.Migrations
                         new
                         {
                             Id = 1,
-                            Category = "Ручки",
+                            CategoryId = 1,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Гладкое письмо, чёрные чернила",
                             ImageUrl = "/images/pen1.jpg",
+                            IsActive = true,
                             Name = "Гелевая ручка",
                             Price = 49.99m
                         },
                         new
                         {
                             Id = 2,
-                            Category = "Тетради",
+                            CategoryId = 2,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Клетка, обложка с рисунком",
                             ImageUrl = "/images/notebook1.jpg",
+                            IsActive = true,
                             Name = "Тетрадь 96 л.",
                             Price = 89.00m
                         },
                         new
                         {
                             Id = 3,
-                            Category = "Маркер",
+                            CategoryId = 3,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Набор из 6 неоновых цветов",
                             ImageUrl = "/images/markers.jpg",
+                            IsActive = true,
                             Name = "Маркеры для выделения",
                             Price = 149.50m
                         },
                         new
                         {
                             Id = 4,
-                            Category = "Карандаши",
+                            CategoryId = 4,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "С ластиком, 0.5 мм",
                             ImageUrl = "/images/mech-pencil.jpg",
+                            IsActive = true,
                             Name = "Карандаш механический",
                             Price = 69.00m
                         },
                         new
                         {
                             Id = 5,
-                            Category = "Блокноты",
+                            CategoryId = 5,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "На спирали, 120 стр.",
                             ImageUrl = "/images/notepad.jpg",
+                            IsActive = true,
                             Name = "Блокнот A5",
                             Price = 129.00m
                         },
                         new
                         {
                             Id = 6,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Металлические, 100 шт.",
                             ImageUrl = "/images/paperclips.jpg",
+                            IsActive = true,
                             Name = "Скрепки",
                             Price = 35.00m
                         },
                         new
                         {
                             Id = 7,
-                            Category = "Папки",
+                            CategoryId = 7,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Формат A4, синяя",
                             ImageUrl = "/images/folder.jpg",
+                            IsActive = true,
                             Name = "Папка-регистратор",
                             Price = 199.00m
                         },
                         new
                         {
                             Id = 8,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "12-разрядный дисплей",
                             ImageUrl = "/images/calculator.jpg",
+                            IsActive = true,
                             Name = "Калькулятор",
                             Price = 499.00m
                         },
                         new
                         {
                             Id = 9,
-                            Category = "Творчество",
+                            CategoryId = 8,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Набор 24 цвета",
                             ImageUrl = "/images/color-pencils.jpg",
+                            IsActive = true,
                             Name = "Цветные карандаши",
                             Price = 189.90m
                         },
                         new
                         {
                             Id = 10,
-                            Category = "Канцтовары",
+                            CategoryId = 9,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Не оставляет следов",
                             ImageUrl = "/images/eraser.jpg",
+                            IsActive = true,
                             Name = "Ластик",
                             Price = 29.00m
                         },
                         new
                         {
                             Id = 11,
-                            Category = "Клей",
+                            CategoryId = 10,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "15 г",
                             ImageUrl = "/images/glue-stick.jpg",
+                            IsActive = true,
                             Name = "Клей-карандаш",
                             Price = 49.00m
                         },
                         new
                         {
                             Id = 12,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Удобные ручки, 21 см",
                             ImageUrl = "/images/scissors.jpg",
+                            IsActive = true,
                             Name = "Ножницы офисные",
                             Price = 119.00m
                         },
                         new
                         {
                             Id = 13,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Набор разноцветных",
                             ImageUrl = "/images/sticky-tabs.jpg",
+                            IsActive = true,
                             Name = "Стикеры-закладки",
                             Price = 39.99m
                         },
                         new
                         {
                             Id = 14,
-                            Category = "Творчество",
+                            CategoryId = 8,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "12 цветов, водные",
                             ImageUrl = "/images/markers2.jpg",
+                            IsActive = true,
                             Name = "Фломастеры",
                             Price = 99.00m
                         },
                         new
                         {
                             Id = 15,
-                            Category = "Ручки",
+                            CategoryId = 1,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Простая и надёжная",
                             ImageUrl = "/images/pen2.jpg",
+                            IsActive = true,
                             Name = "Ручка с синей пастой",
                             Price = 19.00m
                         },
                         new
                         {
                             Id = 16,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Пластиковая, прозрачная",
                             ImageUrl = "/images/ruler.jpg",
+                            IsActive = true,
                             Name = "Линейка 30 см",
                             Price = 25.00m
                         },
                         new
                         {
                             Id = 17,
-                            Category = "Обложки",
+                            CategoryId = 11,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Комплект 10 шт., А5",
                             ImageUrl = "/images/covers.jpg",
+                            IsActive = true,
                             Name = "Обложки для тетрадей",
                             Price = 59.00m
                         },
                         new
                         {
                             Id = 18,
-                            Category = "Аксессуары",
+                            CategoryId = 12,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "На молнии, текстиль",
                             ImageUrl = "/images/pencil-case.jpg",
+                            IsActive = true,
                             Name = "Пенал",
                             Price = 249.00m
                         },
                         new
                         {
                             Id = 19,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Металлический, до 10 листов",
                             ImageUrl = "/images/hole-punch.jpg",
+                            IsActive = true,
                             Name = "Дырокол",
                             Price = 179.00m
                         },
                         new
                         {
                             Id = 20,
-                            Category = "Офис",
+                            CategoryId = 6,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Прозрачный, 18 мм",
                             ImageUrl = "/images/tape.jpg",
+                            IsActive = true,
                             Name = "Скотч канцелярский",
                             Price = 33.00m
                         });
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -498,6 +830,68 @@ namespace PaperCraft.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.Order", b =>
+                {
+                    b.HasOne("PaperCraft.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.OrderItem", b =>
+                {
+                    b.HasOne("PaperCraft.Models.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PaperCraft.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.PaperCraft.Models.UserActivity", b =>
+                {
+                    b.HasOne("PaperCraft.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.Product", b =>
+                {
+                    b.HasOne("PaperCraft.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.Category", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("PaperCraft.Models.Order", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618
         }
