@@ -7,7 +7,8 @@ using PaperCraft.Services;
 using PaperCraft.Models.PaperCraft.Models;
 using PaperCraft.Data;
 using Microsoft.Data.SqlClient;
-
+namespace PaperCraft.Controllers
+{
 public class AccountController : Controller
 {
     private readonly UserManager<AppUser> _userMgr;
@@ -446,3 +447,5 @@ public class AccountController : Controller
         };
     }
 }
+}
+

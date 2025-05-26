@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaperCraft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6da79f67e74ecc5b073c74716fb49516816a0a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32835f4161b88750280e0a6237bce29e13d7a36c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaperCraft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaperCraft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

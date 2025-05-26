@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K5RasA9XVWhrq3M5NhCV5u+2UiuY3TNu/x1W8K6vJjA=",
+  "Hash": "atFzJizkaUjXLdlrOz1ymVeqMToFOX2io6DmcHgveq4=",
   "Source": "PaperCraft",
   "BasePath": "_content/PaperCraft",
   "Mode": "Default",
@@ -2810,12 +2810,12 @@
       "OriginalItemSpec": "C:\\Users\\shind\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.5\\staticwebassets\\V5\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-5ixkmfio90.gz",
+      "Identity": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-qqd292p1ef.gz",
       "SourceId": "PaperCraft",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/PaperCraft",
-      "RelativePath": "js/site#[.{fingerprint=5ixkmfio90}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=qqd292p1ef}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2824,8 +2824,8 @@
       "RelatedAsset": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ao5jxwvzl4",
-      "Integrity": "epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U=",
+      "Fingerprint": "ccvxcx7kea",
+      "Integrity": "FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js"
@@ -4105,8 +4105,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5ixkmfio90",
-      "Integrity": "nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg=",
+      "Fingerprint": "qqd292p1ef",
+      "Integrity": "EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -15034,13 +15034,13 @@
       ]
     },
     {
-      "Route": "js/site.5ixkmfio90.js",
-      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-5ixkmfio90.gz",
+      "Route": "js/site.js",
+      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-qqd292p1ef.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000093896714"
+          "Quality": "0.000093843844"
         }
       ],
       "ResponseHeaders": [
@@ -15050,19 +15050,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10649"
+          "Value": "10655"
         },
         {
           "Name": "ETag",
-          "Value": "\"epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U=\""
+          "Value": "\"FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 16:09:30 GMT"
+          "Value": "Mon, 26 May 2025 16:22:08 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -15078,26 +15078,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg=\""
+          "Value": "W/\"EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "5ixkmfio90"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg="
+          "Value": "sha256-EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4="
         }
       ]
     },
     {
-      "Route": "js/site.5ixkmfio90.js",
+      "Route": "js/site.js",
       "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -15107,7 +15099,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "42644"
+          "Value": "42647"
         },
         {
           "Name": "Content-Type",
@@ -15115,11 +15107,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg=\""
+          "Value": "\"EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 16:09:30 GMT"
+          "Value": "Mon, 26 May 2025 16:22:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-qqd292p1ef.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:22:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.qqd292p1ef.js",
+      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-qqd292p1ef.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000093843844"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10655"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:22:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qqd292p1ef"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.qqd292p1ef.js",
+      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:22:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15129,7 +15266,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5ixkmfio90"
+          "Value": "qqd292p1ef"
         },
         {
           "Name": "label",
@@ -15137,13 +15274,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg="
+          "Value": "sha256-EnMe6j1o9U8E2YyJuH0JF10g4nX857Vg1JUmScJB7Y4="
         }
       ]
     },
     {
-      "Route": "js/site.5ixkmfio90.js.gz",
-      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-5ixkmfio90.gz",
+      "Route": "js/site.qqd292p1ef.js.gz",
+      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-qqd292p1ef.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15152,7 +15289,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10649"
+          "Value": "10655"
         },
         {
           "Name": "Content-Type",
@@ -15160,11 +15297,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U=\""
+          "Value": "\"FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 16:09:30 GMT"
+          "Value": "Mon, 26 May 2025 16:22:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15182,7 +15319,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5ixkmfio90"
+          "Value": "qqd292p1ef"
         },
         {
           "Name": "label",
@@ -15190,144 +15327,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-5ixkmfio90.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000093896714"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10649"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 16:09:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42644"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 16:09:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-nXjQdUAi9rFwhzRtOn2j/xYWHpYNWwmRRmlc/n1ADwg="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js.gz",
-      "AssetFile": "C:\\Users\\shind\\Documents\\git\\PaperCraft\\PaperCraft\\PaperCraft\\obj\\Debug\\net9.0\\compressed\\met7nfyyzd-5ixkmfio90.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10649"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 16:09:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-epT6uwJUCRlr+U+wTDCSovrLD2bBvTmN5QqrC3KJN7U="
+          "Value": "sha256-FMP4WN2a0kH8y0KWY61oaV2wVpIZmWSg2Zr0/54023U="
         }
       ]
     },
